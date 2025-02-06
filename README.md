@@ -50,13 +50,13 @@ import 'package:flutter_z_location/flutter_z_location.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 // 获取GPS定位经纬度
-final coordinate = await FlutterZLocation().getCoordinate();
+final coordinate = await FlutterZLocation.getCoordinate();
 // 经纬度反向地理编码获取地址信息(省、市、区)
-final res1 = await FlutterZLocation().geocodeCoordinate(coordinate.latitude, coordinate.longitude, pathHead: 'assets/');
+final res1 = await FlutterZLocation.geocodeCoordinate(coordinate.latitude, coordinate.longitude, pathHead: 'assets/');
 
 
 // 获取ip地址
-final ipStr = await FlutterZLocation().getIp();
+final ipStr = await FlutterZLocation.getIp();
 // 经纬度反向地理编码获取地址信息(省、市、区)
  final res2 = await FlutterZLocation.geocodeIp(ipStr, pathHead: 'assets/');
 
